@@ -23,7 +23,7 @@ As an alternative to running the similarity calculation yourself, we provide the
 **Download Links:**
 
 *   **Google Drive:** [https://drive.google.com/file/d/1dPktooDpNOmnuiGaKQ8olBd-yFGkeIPO/view?usp=sharing](https://drive.google.com/file/d/1dPktooDpNOmnuiGaKQ8olBd-yFGkeIPO/view?usp=sharing)
-*   **Baidu Pan:** [https://pan.baidu.com/s/1PYMsULBaF0I-aSPgCsIpZA?pwd=yx5u](https://pan.baidu.com/s/1PYMsULBaF0I-aSPgCsIpZA?pwd=yx5u) (Password: `yx5u`)
+*   **Baidu Netdisk:** [https://pan.baidu.com/s/1PYMsULBaF0I-aSPgCsIpZA?pwd=yx5u](https://pan.baidu.com/s/1PYMsULBaF0I-aSPgCsIpZA?pwd=yx5u) (Password: `yx5u`)
 
 **File Contents:**
 
@@ -59,9 +59,9 @@ To train the WideResNet-28-10 model using the pre-computed `20m_top20.npz` data 
 Run the following command, ensuring you replace `'./20m_top20.npz'` with the actual path to your downloaded or generated file:
 
 ```bash
-nohup python train-wa.py --data-dir 'dataset-data' \
+python train-wa.py --data-dir 'dataset-data' \
     --log-dir 'trained_models' \
-    --desc 'WRN28-10Swish_cifar10s_lr0p2_TRADES5_epoch400_bs512_fraction0p8_ls0p1_top20' \
+    --desc 'WRN28-10Swish_cifar10s_lr0p2_TRADES5_epoch400_bs512_fraction0p8_ls0p1' \
     --data cifar10s \
     --batch-size 512 \
     --model wrn-28-10-swish \
@@ -70,4 +70,26 @@ nohup python train-wa.py --data-dir 'dataset-data' \
     --beta 5.0 \
     --unsup-fraction 0.8 \
     --aux-data-filename './20m_top20.npz' \
-    --ls 0.1 &
+    --ls 0.1
+```
+
+## Pre-trained Models
+
+Our pre-trained models are available for download from the following locations:
+
+*   **Google Drive:** [https://drive.google.com/drive/folders/1UI7GDs0-EvqpEFOO1qEIIw44FhQk1gmR?usp=sharing](https://drive.google.com/drive/folders/1UI7GDs0-EvqpEFOO1qEIIw44FhQk1gmR?usp=sharing)
+*   **Baidu Netdisk:** [https://pan.baidu.com/s/1T9G3ei44hslzRpcJM4kD5A?pwd=1s9q ](https://pan.baidu.com/s/1T9G3ei44hslzRpcJM4kD5A?pwd=1s9q) (Password: `1s9q`)
+
+### Evaluation
+
+To evaluate the downloaded models using AutoAttack, you can use the `eval-last-aa.py` script from the [DM-Improves-AT repository](https://github.com/wzekai99/DM-Improves-AT).
+
+First, ensure you have placed the downloaded model files (e.g., the folder `WRN28-10Swish_cifar10s_lr0p2_TRADES5_epoch400_bs512_fraction0p8_ls0p1`) inside the directory specified by `--log-dir` (default is `trained_models`).
+
+Then, run the following command:
+
+```bash
+python eval-last-aa.py --data-dir 'dataset-data' \
+    --log-dir 'trained_models' \
+    --desc 'WRN28-10Swish_cifar10s_lr0p2_TRADES5_epoch400_bs512_fraction0p8_ls0p1'
+```
