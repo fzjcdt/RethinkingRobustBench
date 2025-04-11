@@ -41,10 +41,10 @@ In our case, `k=20` and `num_test_images=10000`.
 
 The following scripts are provided to perform the feature extraction and similarity analysis:
 
-1.  **`extract_feature.py`**: Extracts deep features from the 20M synthetic dataset (`20m_part1.npz`, `20m_part2.npz`).
-    *   *Usage:* Modify paths within the script and run `python extract_feature.py`.
-2.  **`extract_feature_cifar_test.py`**: Extracts deep features from the standard CIFAR-10 test set.
-    *   *Usage:* Modify paths within the script and run `python extract_feature_cifar_test.py`.
+1.  **`extract_features.py`**: Extracts deep features from the 20M synthetic dataset (`20m_part1.npz`, `20m_part2.npz`).
+    *   *Usage:* Modify paths within the script and run `python extract_features.py`.
+2.  **`extract_cifar_test_features.py`**: Extracts deep features from the standard CIFAR-10 test set.
+    *   *Usage:* Modify paths within the script and run `python extract_cifar_test_features.py`.
 3.  **`calc_similarity.py`**: Calculates the cosine similarity between the features extracted in the previous steps. It identifies the most similar synthetic images for each test image.
     *   *Usage:* Ensure the feature files from steps 1 & 2 are available. Modify paths within the script and run `python calc_similarity.py`.
 4.  **`save_data.py`**: Saves the top-k (e.g., top 20) most similar synthetic images, their labels, corresponding test image IDs, ranks, and similarity scores into the `20m_top20.npz` format described above.
