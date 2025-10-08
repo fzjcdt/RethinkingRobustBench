@@ -1,4 +1,6 @@
-# Rethinking RobustBench: Is High Synthetic-Test Data Similarity an Implicit Information Advantage Inflating Robustness Scores?
+This repository contains the official PyTorch implementation for our DSAA 2025 paper: **[Rethinking RobustBench: Is High Synthetic-Test Data Similarity an Implicit Information Advantage Inflating Robustness Scores?]()**.
+
+**[<font color="blue">Paper Link - TODO</font>]**
 
 ## Overview
 
@@ -92,4 +94,11 @@ Then, run the following command:
 python eval-last-aa.py --data-dir 'dataset-data' \
     --log-dir 'trained_models' \
     --desc 'WRN28-10Swish_cifar10s_lr0p2_TRADES5_epoch400_bs512_fraction0p8_ls0p1'
+```
+
+## Citation
+
+If you find this work useful for your research, please consider citing our paper: 
+```
+TODO
 ```
