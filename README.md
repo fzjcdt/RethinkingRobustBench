@@ -100,5 +100,12 @@ python eval-last-aa.py --data-dir 'dataset-data' \
 
 If you find this work useful for your research, please consider citing our paper: 
 ```
-TODO
+@inproceedings{pan2025rethinking,
+  title={Rethinking RobustBench: Is High Synthetic-Test Data Similarity an Implicit Information Advantage Inflating Robustness Scores?},
+  author={Pan, Chao and Tang, Ke and Li, Qing and Yao, Xin},
+  booktitle={2025 IEEE 12th International Conference on Data Science and Advanced Analytics (DSAA)},
+  pages={1--10},
+  year={2025},
+  organization={IEEE}
+}
 ```
