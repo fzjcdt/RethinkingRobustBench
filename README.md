@@ -1,6 +1,4 @@
-This repository contains the official PyTorch implementation for our DSAA 2025 paper: **[Rethinking RobustBench: Is High Synthetic-Test Data Similarity an Implicit Information Advantage Inflating Robustness Scores?]()**.
-
-**[<font color="blue">Paper Link - TODO</font>]**
+This repository contains the official PyTorch implementation for our DSAA 2025 paper: **[Rethinking RobustBench: Is High Synthetic-Test Data Similarity an Implicit Information Advantage Inflating Robustness Scores?](https://ieeexplore.ieee.org/abstract/document/11248007)**.
 
 ## Overview
 
